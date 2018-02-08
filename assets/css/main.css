@@ -47,7 +47,145 @@ table {
 	border-spacing: 0;
 }
 
+/* ----------
+Grid
+---------- */
 
-body {
-  color: red;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container,
+.grid {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.grid,
+.quarter,
+.third {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.quarter,
+.third {
+	display: inline-block;
+  vertical-align: top;
+}
+
+.quarter {
+	width: 25%;
+}
+
+.third {
+	width: 33%;
+}
+
+/* ----------
+Clearfix
+---------- */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/* ----------
+Typography
+---------- */
+
+h1, h2, h5, h6, p {
+	margin-bottom: 22px;
+}
+
+h1, h3 {
+	font-family: cinzel;
+}
+
+h1 {
+	font-size: 44px;
+	line-height: 56px
+}
+
+h3 {
+	font-size: 21px;
+}
+
+h2, h4, p {
+	font-family: raleway;
+}
+
+h2, h4 {
+	font-variant: small-caps;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+
+/* ----------
+Buttons
+---------- */
+
+.btn {
+	background-color: #F26101;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+}
+
+/* ----------
+Header & Footer
+---------- */
+
+header {
+	padding: 44px 0;
+}
+
+.copyright {
+	float: left;
+	padding: 44px 0;
+	}
+
+.logo {
+	float: left;
+}
+
+.support {
+	float: right;
+}
+
+/* ----------
+Body
+---------- */
+
+.hero {
+	background-color: #304269;
+	color: #FFF;
+	padding: 22px 88px 66px 88px;
+}
+
+.triplet {
+	background-color: #D9E8F5;
+	border-radius: 5px;
+	padding: 20px;
 }
