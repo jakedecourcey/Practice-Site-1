@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -54,9 +54,9 @@ Grid
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container,
@@ -65,29 +65,19 @@ Grid
 	width: 960px;
 }
 
-.container {
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.grid,
-.quarter,
-.third {
+.grid__quarter,
+.grid__third {
 	padding-left: 15px;
 	padding-right: 15px;
-}
-
-.quarter,
-.third {
 	display: inline-block;
-  vertical-align: top;
+	vertical-align: top;
 }
 
-.quarter {
+.grid__quarter {
 	width: 25%;
 }
 
-.third {
+.grid__third {
 	width: 33%;
 }
 
@@ -96,27 +86,35 @@ Clearfix
 ---------- */
 .group:before,
 .group:after {
-  content: "";
-  display: table;
+	content: "";
+	display: table;
 }
 .group:after {
-  clear: both;
+	clear: both;
 }
 .group {
-  clear: both;
-  *zoom: 1;
+	clear: both;
+	*zoom: 1;
 }
 
 /* ----------
 Typography
 ---------- */
 
-h1, h2, h5, h6, p {
+a {
+	text-decoration: none;
+}
+
+h1, h2, p {
 	margin-bottom: 22px;
 }
 
-h1, h3 {
-	font-family: cinzel;
+h1, h3, h5 {
+	font-family: cinzel, trajan, georgia, serif;
+}
+
+h2, h4, p {
+	font-family: raleway, 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 h1 {
@@ -124,21 +122,39 @@ h1 {
 	line-height: 56px
 }
 
-h3 {
-	font-size: 21px;
+h2 {
+	font-size: 30px;
+	letter-spacing: .25em;
 }
 
-h2, h4, p {
-	font-family: raleway;
+h3 {
+	font-size: 22px;
+	text-align: center;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 14px;
+	font-weight: bold;
 }
 
 h2, h4 {
 	font-variant: small-caps;
 }
 
-h4 {
-	font-weight: bold;
+hr {
+	border-style: solid;
+	color: #D9E8F5;
+	margin-bottom: 22px;
+	margin-top: 22px;
 }
+
+
+
 
 
 /* ----------
@@ -147,24 +163,74 @@ Buttons
 
 .btn {
 	background-color: #F26101;
+	background: linear-gradient(#F26101, #FF6601);
 	border-radius: 5px;
-	display: inline-block;
+	color: white;
+	display: inline;
+	font-family: raleway, 'helvetica neue', helvetica, arial, sans-serif;
+	font-weight: bold;
 	margin: 0;
 	padding: 10px;
+	text-transform: uppercase;
+}
+
+.btn--subtle {
+	background: none;
+	border: 1px solid #D9E8F5;
+}
+
+.btn--subtle:hover {
+	background-color: red;
 }
 
 /* ----------
-Header & Footer
+Body
 ---------- */
 
+.topper {
+	background-color: #304269;
+	background: linear-gradient(to right, #304269, #91BED4);
+	min-height: 11px;
+}
+
+.content-box .topper{
+	margin-left: -22px;
+	margin-right: -22px;
+	position: relative;
+	top: -20px;
+}
+
+.hero {
+	background-color: #304269;
+	background: linear-gradient(to right, #304269, #91BED4);
+	color: #FFF;
+	margin-bottom: 44px;
+	min-height: 444px;
+	padding: 111px 88px 22px 88px;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.content-box {
+	border-radius: 5px;
+	padding: 20px;
+	overflow: hidden;
+}
+
 header {
-	padding: 44px 0;
+	padding-top: 22px;
+}
+
+footer {
+	background-color: #304269;
+	margin-top: 44px;
+	padding-top: 44px;
 }
 
 .copyright {
 	float: left;
 	padding: 44px 0;
-	}
+}
 
 .logo {
 	float: left;
@@ -174,18 +240,37 @@ header {
 	float: right;
 }
 
-/* ----------
-Body
----------- */
+/*.content-box {
+	background-color: #D9E8F5;
+}*/
 
-.hero {
-	background-color: #304269;
-	color: #FFF;
-	padding: 22px 88px 66px 88px;
+footer .content-box {
+	background: none;
+	color: white;
 }
 
-.triplet {
-	background-color: #D9E8F5;
-	border-radius: 5px;
-	padding: 20px;
+/* ----------
+Navigation
+---------- */
+nav {
+	background-color: #F26101;
+	background: linear-gradient(#F26101, #FF6601);
+	border-radius: 22px;
+	font-size: 16px;
+	margin: 0 auto;
+	padding: 0 22px;
+	position: relative;
+	top: 22px;
+	width: 960px;
+}
+
+.nav__btn {
+	background: none;
+	padding: 12px 22px;
+	line-height: 44px;
+}
+
+.nav__btn:hover {
+	background-color: white;
+	color: #F26101;
 }
